@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIKO FUTSAL | Nairobi 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PIKO<span>FUTSAL</span></div>
+        <ul>
+            <li><a href="#about">Tournament</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+    </nav>
+
+    <section class="apple-slide hero-bg">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <div class="badge">Nairobi • 2026</div>
+        <h1>THE FUTURE OF<br><span>5V5 FOOTBALL</span></h1>
+        <div class="countdown">
+            <div class="time-box"><span id="days">00</span><p>Days</p></div>
+            <div class="time-box"><span id="hours">00</span><p>Hrs</p></div>
+            <div class="time-box"><span id="mins">00</span><p>Min</p></div>
+        </div>
+        <a href="register.html" class="btn-glow">Join the Waitlist</a>
+    </div>
+</section>
+
+<section id="prizes" class="apple-slide prize-bg reveal">
+    <div class="section-header">
+        <span class="badge">The Rewards</span>
+        <h2>CHAMPIONSHIP <span>GLORY</span></h2>
+    </div>
+    
+    <img src="trophy.jpg" class="apple-product-img" alt="Championship Trophy">
+
+    <div class="prize-grid">
+        <div class="prize-card main-prize">
+            <h3>Grand Champions</h3>
+            <p class="amount">KSH 18000</p>
+            <span class="detail">+ Gold Medals & Trophy</span>
+        </div>
+        <div class="prize-card">
+            <h3>MVP</h3>
+            <p>Academy Trial Invite</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="apple-slide about-bg reveal">
+    <div class="content-box">
+        <h2>Beyond the Pitch</h2>
+        <p>Bringing European-style futsal to Nairobi. Show your heart on the court.</p>
+    </div>
+
+    <img src="http://googleusercontent.com/image_collection/image_retrieval/14872538841475084039_0" class="apple-product-img action-img" alt="Match Action">
+</section>
+    <section id="register" class="reg-section reveal">
+        <div class="reg-card">
+            <div class="reg-header">
+                <span class="live-indicator">● REGISTRATION OPENS AUGUST</span>
+                <h2>JOIN THE ROSTER</h2>
+                <p>Limited to 16 Elite Teams. Secure your spot in the bracket.</p>
+            </div>
+            
+            <div class="reg-options">
+                <a href="register.html" class="reg-btn primary">
+               
+                    <span>Register Team</span>
+                    <small>Official Entry Form</small>
+                </a>
+                <a href="https://wa.me/254700000000" class="reg-btn secondary">
+                    <span>Contact Organizers</span>
+                    <small>WhatsApp Inquiries</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PIKO FUTSAL NAIROBI. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // COUNTDOWN TIMER
+        const targetDate = new Date("August 1, 2026 00:00:00").getTime();
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("mins").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        }
+        setInterval(updateTimer, 1000);
+
+        // SCROLL REVEAL
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
