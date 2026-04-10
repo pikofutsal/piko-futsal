@@ -543,4 +543,39 @@ html {
     filter: invert(0.9) hue-rotate(180deg) brightness(1.2); 
     /* ^ MAGIC TRICK: This makes a light Google Form look Dark/Neon! */
 }
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    /* Make the Headlines bigger for mobile impact */
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+    }
+
+    /* Stack the prize cards in one column instead of a grid */
+    .prize-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prize-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust the "Apple Slides" so text doesn't hit the edges */
+    .apple-slide {
+        padding: 60px 5%;
+    }
+
+    /* Make the images fit better without being too small */
+    .apple-product-img {
+        max-width: 100%;
+        max-height: 35vh;
+    }
+
+    /* Make the navigation easier to tap with fingers */
+    nav ul {
+        gap: 15px;
+    }
+}
   
