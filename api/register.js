@@ -16,7 +16,8 @@ export default async function handler(req, res) {
       if (error) throw error
 
       // 3. Success redirect
-      return res.redirect(303, '/thanks.html')
+     
+return res.redirect(303, 'https://pikofutsal.github.io/thanks.html')
       
     } catch (err) {
       return res.status(500).json({ error: err.message })
