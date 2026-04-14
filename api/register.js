@@ -18,7 +18,6 @@ export default async function handler(req, res) {
       // 3. Success redirect
      
 return res.redirect(303, 'https://pikofutsal.github.io/piko-futsal/thanks.html')
-      
     } catch (err) {
       return res.status(500).json({ error: err.message })
     }
